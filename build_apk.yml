@@ -1,0 +1,48 @@
+name: Flutter APK Builder Connector
+
+# تشغيل الموصل عند كل عملية Push أو Pull Request على الفرع الرئيسي
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+  # إمكانية تشغيل الموصل يدوياً من واجهة GitHub
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. قراءة كافة ملفات المستودع بالكامل
+      - name: Checkout Repository Files
+        uses: actions/checkout@v4
+
+      # 2. إعداد بيئة Java (ضرورية لبناء أندرويد)
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      # 3. إعداد وتجهيز بيئة Flutter
+      - name: Set up Flutter Environment
+        uses: subosito/flutter-action@v2
+        with:
+          channel: 'stable'
+          cache: true
+
+      # 4. جلب كافة المكتبات والاعتمادات المذكورة في pubspec.yaml
+      - name: Install Dependencies
+        run: flutter pub get
+
+      # 5. تحويل الملفات وبناء تطبيق APK
+      - name: Build Android APK
+        run: flutter build apk --release
+
+      # 6. رفع ملف APK الناتج حتى تتمكن من تحميلة بسهولة
+      - name: Upload APK Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: application-release-apk
+          path: build/app/outputs/flutter-apk/app-release.apk
