@@ -1,5 +1,5 @@
 name: katib_app
-description: "تطبيق كاتب - منصة هجينة لصناعة وقراءة وتأليف الكتب العربية (Web, Desktop, Android)"
+description: "Katib App - Hybrid platform for reading and writing Arabic books"
 publish_to: 'none'
 version: 1.0.0+1
 
@@ -12,73 +12,67 @@ dependencies:
   flutter_localizations:
     sdk: flutter
 
-  # إدارة الحالة (State Management)
+  # State Management
   flutter_bloc: ^8.1.6
   provider: ^6.1.2
   equatable: ^2.0.5
 
-  # التعامل مع الملفات والـ PDF وتوليد المستندات
-  file_picker: ^8.1.7      # اختيار ملفات الكتب (PDF, EPUB, TXT)
-  pdfx: ^2.6.0             # عرض وقراءة ملفات الـ PDF بأداء عالي ودعم Web/Desktop/Android
-  pdf: ^3.10.8             # توليد ملفات PDF متوافقة مع RTL والخطوط العربية
-  printing: ^5.13.1        # طباعة ومشاركة وعرض ملفات الـ PDF
-  archive: ^3.6.1          # ضغط وتوليد حزم EPUB3 ومستندات DOCX
-                           # توليد ملفات Word (.docx) من قوالب
- 
-   docx_template: ^0.4.0
-  share_plus: ^9.0.0       # مشاركة الملفات المصدرة عبر تطبيقات النظام
-  path_provider: ^2.1.4    # حفظ الملفات محلياً على أجهزة سطح المكتب والأندرويد
+  # Document handling, PDF and File selection
+  file_picker: ^8.1.7
+  pdfx: ^2.6.0
+  pdf: ^3.10.8
+  printing: ^5.13.1
+  archive: ^3.6.1
+  docx_template: ^0.4.0
+  share_plus: ^9.0.0
+  path_provider: ^2.1.4
 
-  # محرك الذكاء الاصطناعي وهندسة الأسلوب والبلاغة
-  google_generative_ai: ^0.4.6 # اتصال بـ Gemini API لتحليل وتطوير الأسلوب العربي
+  # AI Engine
+  google_generative_ai: ^0.4.6
 
-  # التصميم والخطوط العربية وتجاوب الشاشة
-  google_fonts: ^6.2.1     # دعم الخطوط السحابية
-  flutter_screenutil: ^5.9.3 # ضبط القياسات وتجاوب الشاشات
-  flutter_svg: ^2.0.10+1   # عرض الزخارف والأيقونات المتجهة
-  intl: ^0.19.0            # التنسيق الزمني والأرقام العربية ودعم RTL
+  # UI Design, Fonts & Responsiveness
+  google_fonts: ^6.2.1
+  flutter_screenutil: ^5.9.3
+  flutter_svg: ^2.0.10+1
+  intl: ^0.19.0
 
-  # التخزين المحلي وقواعد البيانات (Offline-First)
+  # Local Storage & DB
   shared_preferences: ^2.3.2
   uuid: ^4.5.1
   sqflite: ^2.3.3+1
   hive: ^2.2.3
   hive_flutter: ^1.1.0
 
-  # المصادقة والمزامنة السحابية (Firebase & Cloud Sync)
+  # Firebase & Cloud Sync
   firebase_core: ^3.6.0
   firebase_auth: ^5.3.1
   cloud_firestore: ^5.4.4
-  connectivity_plus: ^6.1.0 # التحقق من حالة الاتصال بالإنترنت
+  connectivity_plus: ^6.1.0
 
-  # الصوتيات وتحويل النص إلى كتاب صوتي
+  # Audio & TTS
   flutter_tts: ^4.1.0
   just_audio: ^0.9.38
 
-  # محرر النصوص المتقدم ودعم التنسيق الغني
+  # Rich Text Editor
   flutter_quill: ^9.4.0
 
-  # شاشة البداية الاحترافية للوضع الداكن والفاتح
+  # Native Splash
   flutter_native_splash: ^2.4.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^4.0.0
-
-  # توليد وإعداد أيقونات التطبيق للمنصات (Android & iOS)
   flutter_launcher_icons: ^0.13.1
 
 flutter:
   uses-material-design: true
 
-  # أصول الصور والكتب الافتراضية
   assets:
     - assets/images/
     - assets/covers/
     - assets/sample_books/
 
-  # الخطوط العربية الأصيلة (Cairo & Tajawal)
   fonts:
     - family: Cairo
       fonts:
