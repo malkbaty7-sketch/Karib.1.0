@@ -1,0 +1,8 @@
+{
+  "name": "Remix Katib App - كاتب",
+  "description": "تطبيق فلاتر هجين لصناعة وقراءة الكتب باللغة العربية بهيكلية Clean Architecture ومكتبة تفاعلية بدعم RTL والوضعين الداكن والفاتح.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

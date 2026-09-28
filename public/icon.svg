@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1c1917" />
+      <stop offset="50%" stop-color="#292524" />
+      <stop offset="100%" stop-color="#78350f" />
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="40%" stop-color="#f59e0b" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+    <linearGradient id="page" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#fef3c7" />
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#000000" flood-opacity="0.45" />
+    </filter>
+  </defs>
+
+  <!-- Base App Tile -->
+  <rect width="512" height="512" rx="112" fill="url(#bg)" />
+  <rect width="504" height="504" x="4" y="4" rx="108" fill="none" stroke="url(#gold)" stroke-width="3" opacity="0.4" />
+
+  <!-- Open Manuscript Book -->
+  <g filter="url(#shadow)" transform="translate(0, 16)">
+    <!-- Left Page -->
+    <path d="M 120 330 C 180 320, 230 345, 252 355 L 252 205 C 230 195, 180 170, 120 180 Z" fill="url(#page)" />
+    <!-- Right Page -->
+    <path d="M 392 330 C 332 320, 282 345, 260 355 L 260 205 C 282 195, 332 170, 392 180 Z" fill="url(#page)" />
+    <!-- Spine binding -->
+    <rect x="252" y="195" width="8" height="165" rx="4" fill="#d97706" />
+    <!-- Subtle lines on pages -->
+    <line x1="145" y1="215" x2="225" y2="222" stroke="#d97706" stroke-width="3" stroke-linecap="round" opacity="0.6" />
+    <line x1="145" y1="245" x2="225" y2="252" stroke="#d97706" stroke-width="3" stroke-linecap="round" opacity="0.6" />
+    <line x1="145" y1="275" x2="215" y2="282" stroke="#d97706" stroke-width="3" stroke-linecap="round" opacity="0.6" />
+
+    <line x1="287" y1="222" x2="367" y2="215" stroke="#d97706" stroke-width="3" stroke-linecap="round" opacity="0.6" />
+    <line x1="287" y1="252" x2="367" y2="245" stroke="#d97706" stroke-width="3" stroke-linecap="round" opacity="0.6" />
+    <line x1="297" y1="282" x2="367" y2="275" stroke="#d97706" stroke-width="3" stroke-linecap="round" opacity="0.6" />
+  </g>
+
+  <!-- Golden Calligraphy Feather Quill -->
+  <g filter="url(#shadow)" transform="rotate(-28 256 220)">
+    <path d="M 256 80 C 275 140, 295 210, 275 270 C 265 295, 256 315, 256 325 C 256 315, 247 295, 237 270 C 217 210, 237 140, 256 80 Z" fill="url(#gold)" />
+    <!-- Shaft -->
+    <line x1="256" y1="70" x2="256" y2="350" stroke="#fef08a" stroke-width="4" stroke-linecap="round" />
+    <polygon points="256,350 252,365 260,365" fill="#fef08a" />
+  </g>
+
+  <!-- Elegant Arabic typography flourish: "كاتب" -->
+  <text x="256" y="440" font-family="'Cairo', 'Tajawal', sans-serif" font-size="52" font-weight="800" text-anchor="middle" fill="url(#gold)" letter-spacing="2">كاتب</text>
+</svg>

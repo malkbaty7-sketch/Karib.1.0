@@ -1,0 +1,30 @@
+# إعدادات شاشة البداية الاحترافية (Native Splash Screen) لتطبيق كاتب
+# متوافقة تلقائياً مع الوضع الداكن والفاتح (Dark & Light Mode) و Android 12+ API
+
+flutter_native_splash:
+  # 1. إعدادات الوضع الفاتح (Light Mode - ورق بردي عاجي فاخر)
+  color: "#FAF8F5"
+  image: "assets/images/splash_logo_royal_light.png"
+  branding: "assets/images/splash_branding_text_light.png"
+  branding_mode: bottom
+
+  # 2. إعدادات الوضع الداكن (Dark Mode - فحمي ملكي عميق مع درع ذهبي مضيء)
+  color_dark: "#12100E"
+  image_dark: "assets/images/splash_logo_royal_dark.png"
+  branding_dark: "assets/images/splash_branding_text_dark.png"
+
+  # التموضع والمؤشرات
+  gravity: center
+  fullscreen: true
+
+  # 3. إعدادات شاشة البداية الرسمية لنظام Android 12+ وما بعده (SplashScreen API)
+  android_12:
+    image: "assets/images/splash_logo_royal_light.png"
+    icon_background_color: "#FAF8F5"
+    image_dark: "assets/images/splash_logo_royal_dark.png"
+    icon_background_color_dark: "#12100E"
+
+  # 4. دعم المنصات الأخرى
+  android: true
+  ios: true
+  web: true

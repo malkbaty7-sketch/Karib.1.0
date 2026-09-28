@@ -1,0 +1,35 @@
+# إعدادات أيقونات تطبيق كاتب (katib_app) على Android و iOS
+# بشعار الدرع الملكي والتدرجات العنبرية والذهبية الأصيلة
+
+flutter_launcher_icons:
+  # تفعيل المنصات الرئيسية
+  android: "launcher_icon"
+  ios: true
+  image_path: "assets/images/app_icon_royal_shield.png"
+  min_sdk_android: 24 # متوافق مع نظام أندرويد الحديث
+
+  # أيقونة التكيف لنظام أندرويد (Adaptive Icon for Android 8.0+)
+  # تضمن تموضع شعار الدرع الذهبي بدقة مع الخلفية الملكية الداكنة
+  adaptive_icon_background: "#1C1917" # أسود فحمي ملكي يتطابق مع هوية كاتب
+  adaptive_icon_foreground: "assets/images/app_icon_royal_shield_foreground.png"
+  adaptive_icon_monochrome: "assets/images/app_icon_royal_shield_monochrome.png"
+
+  # إعدادات نظام iOS (Apple App Store)
+  # تشمل توليد كافة القياسات من 20x20 إلى 1024x1024 (App Store Marketing Icon)
+  remove_alpha_ios: true # إزالة طبقة الشفافية التزاماً بمتطلبات متجر آبل
+
+  # المنصات المرافقة (Web & Desktop)
+  web:
+    generate: true
+    image_path: "assets/images/app_icon_royal_shield.png"
+    background_color: "#1C1917"
+    theme_color: "#D97706"
+
+  windows:
+    generate: true
+    image_path: "assets/images/app_icon_royal_shield.png"
+    icon_size: 256
+
+  macos:
+    generate: true
+    image_path: "assets/images/app_icon_royal_shield.png"
